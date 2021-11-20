@@ -12,6 +12,9 @@ import java.util.Map;
 import java.util.UUID;
 
 public class CreateCollection implements Command{
+    public static final String NAME = "create_collection";
+    public static final String INFO = "creates collection";
+    public static final String PARAMS = "|params: name";
     private Store store;
     public CreateCollection(Store store){
         this.store = store;

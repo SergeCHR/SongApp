@@ -1,5 +1,5 @@
 package com.interact;
-import com.constants.Constants;
+import com.command.*;
 import com.store.Store;
 import com.store.StoreReducer;
 
@@ -32,27 +32,27 @@ public class ConsoleMenu {
         System.out.println("================================================================================================================================");
         System.out.println("Call needed command with params");
         System.out.println("================================================================================================================================");
-        System.out.println("|" + Constants.WRITE_STORE + " - writes store to text file\t\t\t\t\t\t\t\t\t\t\t\t\t|no params needed");
-        System.out.println("|" + Constants.INIT_STORE + " - inits store from text file\t\t\t\t\t\t\t\t\t\t\t\t\t|no params needed");
-        System.out.println("|" + Constants.CREATE_SONG + " - creates songs\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|params: name, style, duration");
-        System.out.println("|" + Constants.CREATE_COLLECTION + " - creates collection\t\t\t\t\t\t\t\t\t\t\t\t\t\t|params: name");
-        System.out.println("|" + Constants.CREATE_DISK + " - creates disk\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|params: name");
-        System.out.println("|" + Constants.SHOW_SONGS + " - shows songs created\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|no params needed");
-        System.out.println("|" + Constants.SHOW_COLLECTIONS + " - shows collection created\t\t\t\t\t\t\t\t\t\t\t\t|no params needed");
-        System.out.println("|" + Constants.SHOW_DISKS + " - shows disks created\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|no params needed");
-        System.out.println("|" + Constants.DELETE_SONG + " - deletes song from created songs\t\t\t\t\t\t\t\t\t\t\t\t|params: name");
-        System.out.println("|" + Constants.DELETE_COLLECTION + " - deletes collection from created collections\t\t\t\t\t\t\t|params: name");
-        System.out.println("|" + Constants.DELETE_DISK + " - deletes disk from created disks\t\t\t\t\t\t\t\t\t\t\t\t|params: name");
-        System.out.println("|" + Constants.DELETE_SONG_FROM_COLLECTION + " - deletes song from certain collection\t\t\t\t\t\t\t|params: songName collectionName");
-        System.out.println("|" + Constants.DELETE_SONG_FROM_DISK + " - deletes song from certain disk\t\t\t\t\t\t\t\t\t\t|params: songName diskName");
-        System.out.println("|" + Constants.SONG_TO_COLLECTION + " - adds certain song to certain collection\t\t\t\t\t\t\t\t|params: songName collectionName");
-        System.out.println("|" + Constants.COLLECTION_TO_DISK + " - adds certain collection to certain disk\t\t\t\t\t\t\t\t|params: collectionName diskName");
-        System.out.println("|" + Constants.CALCULATE_DISK_DURATION + " - calculates certain disk duration\t\t\t\t\t\t\t\t\t|params: diskName");
-        System.out.println("|" + Constants.CALCULATE_COLLECTION_DURATION + " - calculates certain collection duration\t\t\t\t\t\t|params: collectionName");
-        System.out.println("|" + Constants.SONGS_BY_DURATION_RANGE + " - shows songs that are in range from certain disk songs\t\t\t|params: diskName rangeStart rangeEnd");
-        System.out.println("|" + Constants.SORT_DISK_BY_STYLE + " - sorts certain disk songs by certain style\t\t\t\t\t\t\t\t|params: diskName style");
+        System.out.println("|" + WriteStoreToFile.NAME + " - " + WriteStoreToFile.INFO + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + WriteStoreToFile.PARAMS);
+        System.out.println("|" + InitStoreFromFile.NAME + " - " + InitStoreFromFile.INFO + "\t\t\t\t\t\t\t\t\t\t\t\t\t" + InitStoreFromFile.PARAMS);
+        System.out.println("|" + CreateSong.NAME + " - " + CreateSong.INFO + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + CreateSong.PARAMS);
+        System.out.println("|" + CreateCollection.NAME + " - " + CreateCollection.INFO + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + CreateCollection.PARAMS);
+        System.out.println("|" + CreateDisk.NAME + " - " + CreateDisk.INFO + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + CreateDisk.PARAMS);
+        System.out.println("|" + ShowSongs.NAME + " - " + ShowSongs.INFO + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + ShowSongs.PARAMS);
+        System.out.println("|" + ShowCollections.NAME + " - " + ShowCollections.INFO + "\t\t\t\t\t\t\t\t\t\t\t\t" + ShowCollections.PARAMS);
+        System.out.println("|" + ShowDisks.NAME + " - " + ShowDisks.INFO + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + ShowDisks.PARAMS);
+        System.out.println("|" + DeleteSong.NAME + " - " + DeleteSong.INFO + "\t\t\t\t\t\t\t\t\t\t\t\t" + DeleteSong.PARAMS);
+        System.out.println("|" + DeleteCollection.NAME + " - " + DeleteCollection.INFO + "\t\t\t\t\t\t\t" + DeleteCollection.PARAMS);
+        System.out.println("|" + DeleteDisk.NAME + " - " + DeleteDisk.INFO + "\t\t\t\t\t\t\t\t\t\t\t\t" + DeleteDisk.PARAMS);
+        System.out.println("|" + DeleteSongFromCollection.NAME + " - " + DeleteSongFromCollection.INFO + "\t\t\t\t\t\t\t" + DeleteSongFromCollection.PARAMS);
+        System.out.println("|" + DeleteSongFromDisk.NAME + " - " + DeleteSongFromDisk.INFO + "\t\t\t\t\t\t\t\t\t\t" + DeleteSongFromDisk.PARAMS);
+        System.out.println("|" + AddSongToCollection.NAME + " - " + AddSongToCollection.INFO + "\t\t\t\t\t\t\t" + AddSongToCollection.PARAMS);
+        System.out.println("|" + AddCollectionToDisk.NAME + " - " + AddCollectionToDisk.INFO + "\t\t\t\t\t\t\t" + AddCollectionToDisk.PARAMS);
+        System.out.println("|" + CalculateDiskDuration.NAME + " - " + CalculateDiskDuration.INFO + "\t\t\t\t\t\t\t\t\t" + CalculateDiskDuration.PARAMS);
+        System.out.println("|" + CalculateCollectionDuration.NAME + " - " + CalculateCollectionDuration.INFO + "\t\t\t\t\t\t" + CalculateCollectionDuration.PARAMS);
+        System.out.println("|" + SongsByDurationRange.NAME + " - " + SongsByDurationRange.INFO + "\t\t\t" + SongsByDurationRange.PARAMS);
+        System.out.println("|" + SortDiskByStyle.NAME + " - " + SortDiskByStyle.INFO + "\t\t\t\t\t\t\t\t" + SortDiskByStyle.PARAMS);
         System.out.println("|help - shows info about available commands\t\t\t\t\t\t\t\t\t\t\t\t\t|no params needed");
-        System.out.println("|" + Constants.EXIT + " - exit from application\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|no params needed");
+        System.out.println("|" + Exit.NAME + " - " + Exit.INFO + "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" + Exit.PARAMS);
         System.out.println("================================================================================================================================");
     }
     private String getOption(){

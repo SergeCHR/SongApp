@@ -9,6 +9,9 @@ import com.store.Store;
 import java.util.Map;
 
 public class CalculateCollectionDuration implements Command{
+    public static final String NAME = "calculate_collection_duration";
+    public static final String INFO = "calculates certain collection duration";
+    public static final String PARAMS = "|params: name";
     private Store store;
     public CalculateCollectionDuration(Store store){
         this.store = store;

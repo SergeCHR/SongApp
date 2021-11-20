@@ -8,7 +8,10 @@ import com.store.Store;
 import java.util.Map;
 
 public class WriteStoreToFile implements Command{
-   private Store store;
+    public static final String NAME = "write_store";
+    public static final String INFO = "writes store to file";
+    public static final String PARAMS = "|no params needed";
+    private Store store;
     public WriteStoreToFile(Store store){
         this.store = store;
     }
@@ -21,4 +24,5 @@ public class WriteStoreToFile implements Command{
         songCollectionUtils.writeToFile("Collections.txt", store.getCreatedCollections());
         diskUtils.writeToFile("Disks.txt", store.getCreatedDisks());
     }
+
 }

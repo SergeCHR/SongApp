@@ -9,6 +9,9 @@ import com.store.Store;
 import java.util.Map;
 
 public class AddCollectionToDisk implements Command{
+    public static final String NAME = "add_collection_to_dik";
+    public static final String INFO = "adds certain collection to certain disk";
+    public static final String PARAMS = "|params: diskName collectionName";
     private Store store;
     public AddCollectionToDisk(Store store){
         this.store = store;

@@ -8,6 +8,9 @@ import com.store.Store;
 import java.util.Map;
 
 public class InitStoreFromFile implements Command{
+    public static final String NAME = "init_store";
+    public static final String INFO = "inits store from text file";
+    public static final String PARAMS = "|no params needed";
     private Store store;
     public InitStoreFromFile(Store store){
        this.store = store;

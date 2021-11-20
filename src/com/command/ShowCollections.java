@@ -7,6 +7,9 @@ import java.util.List;
 import java.util.Map;
 
 public class ShowCollections implements Command{
+    public static final String NAME = "show_collections";
+    public static final String INFO = "shows collections created";
+    public static final String PARAMS = "|no params needed";
     private Store store;
     public ShowCollections(Store store){
         this.store = store;

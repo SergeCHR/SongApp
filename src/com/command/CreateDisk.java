@@ -12,6 +12,9 @@ import java.util.Map;
 import java.util.UUID;
 
 public class CreateDisk implements Command{
+    public static final String NAME = "create_disk";
+    public static final String INFO = "creates disk";
+    public static final String PARAMS = "|params: name";
     private Store store;
     public CreateDisk(Store store){
         this.store = store;

@@ -10,6 +10,9 @@ import com.store.Store;
 import java.util.Map;
 
 public class DeleteSongFromCollection implements Command{
+    public static final String NAME = "delete_song_from_collection";
+    public static final String INFO = "deletes song from certain collection";
+    public static final String PARAMS = "|params: songName collectionName";
     private Store store;
     public DeleteSongFromCollection(Store store){
         this.store = store;

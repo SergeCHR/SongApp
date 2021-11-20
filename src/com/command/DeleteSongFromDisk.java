@@ -9,6 +9,9 @@ import com.store.Store;
 import java.util.Map;
 
 public class DeleteSongFromDisk implements Command{
+    public static final String NAME = "delete_song_from_disk";
+    public static final String INFO = "deletes song from certain disk";
+    public static final String PARAMS = "|params: songName diskName";
     private Store store;
     public DeleteSongFromDisk(Store store){
         this.store = store;

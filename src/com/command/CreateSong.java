@@ -9,6 +9,9 @@ import java.util.Map;
 import java.util.UUID;
 
 public class CreateSong implements Command{
+    public static final String NAME = "create_song";
+    public static final String INFO = "creates song";
+    public static final String PARAMS = "|params: name style duration";
     private Store store;
     public CreateSong(Store store){
         this.store = store;

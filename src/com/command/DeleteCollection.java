@@ -8,6 +8,9 @@ import com.store.Store;
 import java.util.Map;
 
 public class DeleteCollection implements Command{
+    public static final String NAME = "delete_collection";
+    public static final String INFO = "deletes collection from created collections";
+    public static final String PARAMS = "|params: name";
     private Store store;
     public DeleteCollection(Store store){
         this.store = store;

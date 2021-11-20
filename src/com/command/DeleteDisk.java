@@ -9,6 +9,9 @@ import com.store.Store;
 import java.util.Map;
 
 public class DeleteDisk implements Command{
+    public static final String NAME = "delete_disk";
+    public static final String INFO = "deletes disk from created disks";
+    public static final String PARAMS = "|params: name";
     private Store store;
     public DeleteDisk(Store store){
         this.store = store;

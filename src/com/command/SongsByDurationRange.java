@@ -11,6 +11,9 @@ import java.util.List;
 import java.util.Map;
 
 public class SongsByDurationRange implements Command{
+    public static final String NAME = "songs_by_duration_range";
+    public static final String INFO = "shows songs that are in range from certain disk songs";
+    public static final String PARAMS = "|params: diskName rangeStart rangeEnd";
     Store store;
     public SongsByDurationRange(Store store){
         this.store = store;

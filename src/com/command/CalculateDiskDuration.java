@@ -11,6 +11,9 @@ import com.store.Store;
 import java.util.Map;
 
 public class CalculateDiskDuration implements Command{
+    public static final String NAME = "calculate_disk_duration";
+    public static final String INFO = "calculates certain disk duration";
+    public static final String PARAMS = "|params: name";
     private Store store;
     public CalculateDiskDuration(Store store){
         this.store = store;

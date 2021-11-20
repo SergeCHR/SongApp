@@ -9,6 +9,9 @@ import com.store.Store;
 import java.util.Map;
 
 public class AddSongToCollection implements Command{
+    public static final String NAME = "add_song_to_collection";
+    public static final String INFO = "adds certain song to certain collection";
+    public static final String PARAMS = "|params: songName collectionName";
     private Store store;
     public AddSongToCollection(Store store){
         this.store = store;
