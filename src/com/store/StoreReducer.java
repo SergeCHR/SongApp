@@ -14,7 +14,6 @@ public class StoreReducer {
         this.commands.put(Constants.CREATE_SONG, new CreateSong(this.store));
         this.commands.put(Constants.CREATE_COLLECTION, new CreateCollection(this.store));
         this.commands.put(Constants.CREATE_DISK, new CreateDisk(this.store));
-        this.commands.put(Constants.SHOW_SONGS, new ShowSongs(this.store));
         this.commands.put(Constants.EXIT, new Exit());
         this.commands.put(Constants.SHOW_SONGS, new ShowSongs(this.store));
         this.commands.put(Constants.SHOW_COLLECTIONS, new ShowCollections(this.store));
@@ -30,6 +29,8 @@ public class StoreReducer {
         this.commands.put(Constants.INIT_STORE, new InitStoreFromFile(this.store));
         this.commands.put(Constants.CALCULATE_COLLECTION_DURATION, new CalculateCollectionDuration(this.store));
         this.commands.put(Constants.CALCULATE_DISK_DURATION, new CalculateDiskDuration(this.store));
+        this.commands.put(Constants.SORT_DISK_BY_STYLE, new SortDiskByStyle(this.store));
+        this.commands.put(Constants.SONGS_BY_DURATION_RANGE, new SongsByDurationRange(this.store));
     }
 
     public Map<String, Command> getCommands() {

@@ -54,9 +54,9 @@ public class Song implements Serializable {
     public String toString() {
         return "Song{" +
                 "name='" + name + '\'' +
-                ", style='" + style + '\'' +
-                ", duration=" + duration +
-                ", id=" + id +
-                '}';
+                ", \nstyle='" + style + '\'' +
+                ", \nduration=" + duration +
+                ", \nid=" + id +
+                "\n}";
     }
 }

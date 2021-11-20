@@ -1,7 +1,5 @@
 package com.audio.song;
 
-import com.audio.disk.Disk;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -40,4 +38,5 @@ public class SongUtils {
         catch (Exception e) {
         }
     }
+
 }

@@ -30,4 +30,11 @@ public class HelperFunctions {
         }
         return  null;
     }
+    public boolean songInRange(Integer lowerBound, Integer higherBound, Song song){
+        Integer duration = song.getDuration();
+        if (duration >= lowerBound && duration <= higherBound){
+            return true;
+        }
+        return false;
+    }
 }

@@ -1,6 +1,5 @@
 package com.audio.collection;
 
-
 import com.audio.song.Song;
 
 import java.io.FileInputStream;
@@ -50,4 +49,5 @@ public class SongCollectionUtils {
         catch (Exception e) {
         }
     }
+
 }

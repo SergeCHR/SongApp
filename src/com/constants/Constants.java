@@ -19,4 +19,6 @@ public class Constants {
     public static final String INIT_STORE = "init_store";
     public static final String CALCULATE_DISK_DURATION = "calculate_disk_duration";
     public static final String CALCULATE_COLLECTION_DURATION = "calculate_collection_duration";
+    public static final String SORT_DISK_BY_STYLE = "sort_disk_by_style";
+    public static final String SONGS_BY_DURATION_RANGE = "songs_by_duration_range";
 }

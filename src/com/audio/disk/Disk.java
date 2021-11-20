@@ -44,9 +44,9 @@ public class Disk implements Serializable {
     @Override
     public String toString() {
         return "Disk{" +
-                "name='" + name + '\'' +
-                ", disk=" + disk +
-                ", id=" + id +
-                '}';
+                "\nname='" + name + '\'' +
+                ", \ndiskSongs=" + disk +
+                ", \nid=" + id +
+                "\n}";
     }
 }

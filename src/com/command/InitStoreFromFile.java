@@ -1,15 +1,10 @@
 package com.command;
 
-import com.audio.collection.SongCollection;
 import com.audio.collection.SongCollectionUtils;
-import com.audio.disk.Disk;
 import com.audio.disk.DiskUtils;
-import com.audio.song.Song;
 import com.audio.song.SongUtils;
 import com.store.Store;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 public class InitStoreFromFile implements Command{

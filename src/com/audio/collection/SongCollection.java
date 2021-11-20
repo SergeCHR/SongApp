@@ -44,9 +44,9 @@ public class SongCollection implements Serializable {
     @Override
     public String toString() {
         return "SongCollection{" +
-                "name='" + name + '\'' +
-                ", songCollection=" + songCollection +
-                ", id=" + id +
-                '}';
+                "\nname='" + name + '\'' +
+                ", \nsongCollection=" + songCollection +
+                ", \nid=" + id +
+                "\n}";
     }
 }
