@@ -67,23 +67,26 @@ public class ConsoleMenu {
             List<String> transformedOption = Arrays.asList(optionInput.split(" "));
             String option = transformedOption.get(0);
             Map<String, String> paramsMap = new HashMap<>();
-            for (String param: transformedOption) {
-                if (!param.equals(option))
-                {
-                    List<String> transformedParam = Arrays.asList(param.split("="));
-                    paramsMap.put(transformedParam.get(0), transformedParam.get(1));
-                }
+            if (!reducer.getCommands().containsKey(option) && !option.equals("help")){
+                System.out.println("Wrong command. Try help...");
             }
-            if (!option.equals("help")){
-                if (reducer.getCommands().containsKey(option)){
+            else{
+                if (!option.equals("help")){
+                    for (String param: transformedOption) {
+                        if (!param.equals(option))
+                        {
+                            List<String> transformedParam = Arrays.asList(param.split("="));
+                            if (transformedParam.size()>1){
+                                paramsMap.put(transformedParam.get(0), transformedParam.get(1));
+                            }
+                        }
+                    }
                     reducer.getCommands().get(option).execute(paramsMap);
                 }
                 else{
-                    System.out.println("Wrong command. Try help...");
+                    help();
                 }
-            }
-            else{
-                help();
+
             }
 
         }
